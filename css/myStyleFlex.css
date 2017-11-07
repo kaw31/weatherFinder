@@ -1,0 +1,385 @@
+body {
+    height: 100vh;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+/*    overflow: hidden;*/
+    
+}
+
+
+/* ======== NAVBAR =========== */
+
+
+#navbar {
+    background-color: rgba(0,0,0,0.5);
+    margin: 0;
+    width: 100%;
+    box-shadow: 3px 3px 30px rgba(0,0,0,0.3);
+    z-index: 10;
+    text-shadow: 2px 2px 80px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 32vh;
+}
+
+h1 {
+    margin: 0 auto;
+    padding: 15px 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 3;
+    font-weight: 100;
+    width: 90%;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin: 0;
+    letter-spacing: 2;
+}
+
+.search {
+    margin: 15px 0 15px;
+    font-size: 1.3em;
+    height: 30px;
+    text-align: center;
+}
+
+input {
+    padding: 2px 5px;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(255,255,255,0.9);
+}
+
+input::placeholder {
+    color: rgba(0,0,0,0.3);
+}
+
+input[type=text] {
+    color: rgba(0,0,0,0.7);
+}
+
+button {
+    color: gray;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* ======== BACKGROUND SLIDERS =========== */
+
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -10; 
+}
+/*
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left; 
+}
+*/
+
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: fixed;
+    bottom: 30%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px; 
+}
+
+
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../img/sun2.jpeg);
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../img/rain7.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../img/darkclouds2.jpeg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../img/storm3.jpg);
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../img/mist2.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../img/snow2.jpg);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+
+/* ======== BACKGROUND IMAGE =========== */
+
+#bgImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+}
+
+video {
+    height: 100%;
+}
+
+/* ======== TODAYS WEATHER =========== */
+
+
+.cityInfo {
+    padding: 20px;
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
+#cityTitle {
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 3;
+}
+
+#today {
+    font-size: 1.5em;
+    letter-spacing: 2;
+    margin: 10px 0 0;
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
+#todaysDate {
+    font-size: 1.5em;
+    letter-spacing: 1;
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
+#imageToday {
+    width: 200px;
+    margin: 20px;
+}
+
+#dayDescription {
+    text-transform: capitalize;
+    font-size: 1.3em;
+    letter-spacing: 1;
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
+.highLowToday {
+    display: inline-block;
+    margin: 20px 20px 50px;
+    letter-spacing: 1;
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
+
+.hLNum {
+    font-size: 2em;
+}
+
+
+/* ======== THIS WEEK TABLE =========== */
+
+#weatherTable {
+    visibility: hidden;
+}
+
+/* ========= phones =========== */
+@media only screen and (max-width: 899px) {
+    
+    
+h1 {
+    font-size: 2.5em;
+}
+    
+.flex-container {
+    background-color: rgba(0,0,0,0.4);
+    width: 90%;
+    margin: 0 auto 20px;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+    
+.flex-week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.dayOne, .dayThree, .dayFive{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.flex-head {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    padding: 20px;
+}
+
+.flex-day {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 0.8em;
+}
+
+.flex-day div {
+    width: 20%;
+    padding: 10px;
+}
+
+
+.flex-container img {
+    width:  60px;
+}
+    
+}
+
+/* ========== tablets and desktop ========= */
+@media only screen and (min-width: 900px) {
+    
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(0,0,0,0.4);
+    margin: 0 auto 20px;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+    
+.flex-head {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    padding: 20px; 
+}
+    
+.flex-week {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: space-between;
+    font-size: 1.1em;
+    width: 100%;
+    
+}
+    
+.dayTwo, .dayFour, .daySix {
+    background-color: rgba(255,255,255,0.3);
+}
+ 
+.flex-day {
+    width: 16%;
+    padding: 10px;
+}
+    
+.flex-day div {
+    padding: 15px;
+}
+    
+.daysDescs {
+    height: 40px;
+}
+    
+.flex-container img {
+    width:  60px;
+}
+    
+}
+
+
+
+
+

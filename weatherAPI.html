@@ -1,0 +1,281 @@
+<!DOCTYPE>
+
+<html>
+<head>
+    
+<title>The Open Weather API</title>    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <link href="css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <!--    FONTS    -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Playfair+Display|Poiret+One" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    
+    <link href="css/myStyleFlex.css" rel="stylesheet" type="text/css" >
+    
+</head>
+<body>
+    
+<!--    NAVBAR     -->
+    
+<div id="navbar">
+    <h1>What's the Weather?</h1>
+    <h4>Enter your City to find out</h4>
+    <div >
+        <input id="theCity" type="text" class="search" placeholder="e.g. london"> 
+        <button id="myButton" class="search"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+    
+<!--    BG IMAGE     -->
+    
+    <img src="" id="bgImg">
+    
+<!--    MAIN CONTENT     -->
+    
+<div class="mainCont">
+
+    <div class="cityInfo">
+        <div id="cityTitle"></div>
+        <div id="country"></div>
+    </div>
+    
+    <div id="today"></div>
+    
+    <div id="todaysDate"></div>
+    
+    <div id="currentTemp"></div>
+
+    <div><img id="imageToday" class="weatherImg"></div>
+    
+
+    <div id="dayDescription"></div>
+    
+    <div class="highLowToday">
+        <p id="highTitle"></p>
+        <div class="hLnum" id="highToday"></div>
+    </div>
+    <div class="highLowToday">
+        <p id="lowTitle"></p>
+        <div class="hLnum" id="lowToday"></div>
+    </div>
+
+    <br>
+    
+<!--    WEEKLY WEATHER TABLE    -->
+    
+    <section id="weatherTable" class="flex-container">
+        
+        <div class="flex-head">
+            <div id="tableHead"></div>    
+        </div>
+            
+        <div class="flex-week">
+        <!--Day 1-->
+        <div class="flex-day dayOne">
+            <div id="r1c1"></div>
+            <div> <img id="r1c2" ></div>
+            <div id="r1desc" class="daysDescs"></div>
+            <div id="r1c3"></div>
+            <div id="r1c4"></div>
+        </div>	
+        
+        <!--Day 2-->
+
+        <div class="flex-day dayTwo">
+            <div id="r2c1"></div>
+            <div> <img id="r2c2" ></div>
+            <div id="r2desc" class="daysDescs"></div>
+            <div id="r2c3"></div>
+            <div id="r2c4"></div>
+        </div>
+        
+        <!--Day 3-->
+            
+        <div class="flex-day dayThree">
+            <div id="r3c1"></div>
+            <div> <img id="r3c2" ></div>
+            <div id="r3desc" class="daysDescs"></div>
+            <div id="r3c3"></div>
+            <div id="r3c4"></div>
+        </div>
+        
+        <!--Day 4-->
+
+        <div class="flex-day dayFour">
+            <div id="r4c1"></div>
+            <div> <img id="r4c2" ></div>
+            <div id="r4desc" class="daysDescs"></div>
+            <div id="r4c3"></div>
+            <div id="r4c4"></div>
+        </div>
+
+        <!--Day 5-->
+
+        <div class="flex-day dayFive">
+            <div id="r5c1"></div>
+            <div> <img id="r5c2" ></div>
+            <div id="r5desc" class="daysDescs"></div>
+            <div id="r5c3"></div>
+            <div id="r5c4"></div>
+        </div>
+        
+        <!--Day 6-->
+        
+        <div class="flex-day daySix">
+            <div id="r6c1"></div>
+            <div> <img id="r6c2" ></div>
+            <div id="r6desc" class="daysDescs"></div>
+            <div id="r6c3"></div>
+            <div id="r6c4"></div>
+        </div>
+        </div>
+        
+    </section>
+        
+        
+        
+<!--
+        <table id="weatherTable">
+        
+        <tr>
+            <th colspan="6" id="tableHead"></th>    
+        </tr>
+-->
+            
+        <!--Days-->
+<!--
+        <tr>
+            <td id="r1c1"></td>
+            <td id="r2c1"></td>
+            <td id="r3c1"></td>
+            <td id="r4c1"></td>
+            <td id="r5c1"></td>
+            <td id="r6c1"></td>
+        </tr>	
+        
+-->
+        <!--Dates-->
+
+<!--
+        <tr class="dates">
+            <td id="r1date" ></td>
+            <td id="r2date" ></td>
+            <td id="r3date" ></td>
+            <td id="r4date" ></td>
+            <td id="r5date" ></td>
+            <td id="r6date" ></td>
+        </tr>
+-->
+        
+        <!--Icons-->
+
+<!--
+        <tr class="weekIcons">
+            <td> <img id="r1c2" ></td>
+            <td> <img id="r2c2" ></td>
+            <td> <img id="r3c2" ></td>
+            <td> <img id="r4c2" ></td>
+            <td> <img id="r5c2" ></td>
+            <td> <img id="r6c2" ></td>
+        </tr>
+-->
+        
+        <!--Descriptions-->
+            
+<!--
+        <tr class="weekDesc">
+            <td id="r1desc" ></td>
+            <td id="r2desc" ></td>
+            <td id="r3desc" ></td>
+            <td id="r4desc" ></td>
+            <td id="r5desc" ></td>
+            <td id="r6desc" ></td>
+        </tr>
+-->
+        
+        <!--Highs-->
+
+<!--
+        <tr>
+            <td id="r1c3"></td>
+            <td id="r2c3"></td>
+            <td id="r3c3"></td>
+            <td id="r4c3"></td>
+            <td id="r5c3"></td>
+            <td id="r6c3"></td>
+        </tr>
+-->
+
+        <!--Lows-->
+<!--
+
+        <tr>
+            <td id="r1c4"></td>
+            <td id="r2c4"></td>
+            <td id="r3c4"></td>
+            <td id="r4c4"></td>
+            <td id="r5c4"></td>
+            <td id="r6c4"></td>
+        </tr>
+
+    </table>    
+        
+-->
+    
+    
+</div>
+    
+    <!--Background Slideshow-->
+    
+    
+<div id="bgSlides">
+    <ul class="cb-slideshow">
+        <li>
+            <span>Image 01</span>
+            <div>
+    <!--			<h3>sun</h3>-->
+            </div>
+        </li>
+        <li>
+            <span>Image 02</span>
+            <div>
+    <!--			<h3>rain</h3>-->
+            </div>
+        </li>
+        <li>
+            <span>Image 3</span>
+            <div>
+    <!--			<h3>clouds</h3>-->
+            </div>
+        </li>
+        <li>
+            <span>Image 04</span>
+            <div>
+    <!--			<h3>storm</h3>-->
+            </div>
+        </li>
+        <li>
+            <span>Image 05</span>
+            <div>
+    <!--			<h3>mist</h3>-->
+            </div>
+        </li>
+        <li>
+            <span>Image 06</span>
+            <div>
+    <!--			<h3>snow</h3>-->
+            </div>
+        </li>
+    </ul> 
+</div>
+    
+ 
+<script src="js/myScript.js"></script>
+    
+</body>
+</html>
